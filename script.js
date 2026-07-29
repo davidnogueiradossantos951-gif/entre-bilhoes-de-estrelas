@@ -22,23 +22,13 @@ star.style.width;
 }
 const btn = document.getElementById("btn");
 
-if (btn) {
+btn.addEventListener("click", () => {
 
-    btn.addEventListener("click", () => {
+    document.getElementById("intro").style.display = "none";
 
-        const intro = document.getElementById("intro");
-        const constelacao = document.getElementById("constelacao");
+    document.getElementById("constelacao").style.display = "block";
 
-        if (intro && constelacao) {
-
-            intro.style.display = "none";
-            constelacao.style.display = "block";
-
-        }
-
-    });
-
-}
+});
 const mensagens = [
 "Entre tantas pessoas no mundo, foi você quem chamou minha atenção. ❤️",
 
@@ -103,7 +93,7 @@ function abrirPortalUniverso() {
     portal.classList.add("portal-abrindo");
 
 }
-}
+
 const botaoUniverso = document.getElementById("botaoUniverso");
 const viagemEspacial = document.getElementById("viagemEspacial");
 
