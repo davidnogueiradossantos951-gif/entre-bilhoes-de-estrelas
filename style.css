@@ -613,3 +613,93 @@ font-size:1.2rem;
     }
 
 }
+/* CORAÇÃO FORMADO POR LUZ */
+
+.coracaoEstrelas {
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+
+.coracaoEstrelas::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+    radial-gradient(circle, white 2px, transparent 3px);
+
+    background-size: 25px 25px;
+
+    clip-path: path(
+    "M150 270
+     C-20 130, 40 20, 150 100
+     C260 20, 320 130, 150 270"
+    );
+
+    filter:
+    drop-shadow(0 0 10px white);
+
+    animation:
+    brilhoEstrelasCoracao 2s infinite;
+}
+
+
+@keyframes brilhoEstrelasCoracao {
+
+    0% {
+        opacity: .5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: .5;
+    }
+
+}
+/* CORAÇÃO VIVO */
+
+#galaxiaCoracao {
+    animation: entradaCoracao 3s ease forwards;
+}
+
+
+@keyframes entradaCoracao {
+
+    from {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+
+.coracaoEstrelas {
+    animation: pulsarCoracao 2.5s infinite;
+}
+
+
+@keyframes pulsarCoracao {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
