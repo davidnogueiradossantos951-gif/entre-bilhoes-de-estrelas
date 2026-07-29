@@ -98,18 +98,22 @@ const botaoUniverso = document.getElementById("botaoUniverso");
 const viagemEspacial = document.getElementById("viagemEspacial");
 
 if (botaoUniverso) {
+
     botaoUniverso.addEventListener("click", () => {
 
-        // esconde o conteúdo do portal
-        document.querySelector(".portal-conteudo").style.opacity = "0";
+        const conteudoPortal = document.querySelector(".portal-conteudo");
 
-        // ativa a viagem
-        viagemEspacial.style.display = "block";
+        if (conteudoPortal) {
+            conteudoPortal.style.opacity = "0";
+        }
 
-        // adiciona animação
-        viagemEspacial.classList.add("iniciar-viagem");
+        if (viagemEspacial) {
+            viagemEspacial.style.display = "block";
+            viagemEspacial.classList.add("iniciar-viagem");
+        }
 
     });
+
 }
 const galaxia = document.getElementById("galaxiaCoracao");
 
