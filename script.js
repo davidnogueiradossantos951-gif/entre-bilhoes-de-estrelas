@@ -110,6 +110,14 @@ if (botaoUniverso) {
         if (viagemEspacial) {
             viagemEspacial.style.display = "block";
             viagemEspacial.classList.add("iniciar-viagem");
+
+            setTimeout(() => {
+
+    viagemEspacial.style.display = "none";
+
+    document.getElementById("galaxiaCoracao").style.display = "block";
+
+}, 4000);
         }
 
     });
