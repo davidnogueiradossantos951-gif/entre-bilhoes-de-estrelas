@@ -102,17 +102,35 @@ height:100%;
 
 .star{
 position:absolute;
-width:3px;
-height:3px;
+
 background:white;
+
 border-radius:50%;
-animation:piscando 2s infinite;
-}
+
+animation:piscando 3s infinite;
+
+box-shadow:
+0 0 5px white,
+0 0 10px white;
+  }
 
 @keyframes piscando{
-50%{
+
+0%{
 opacity:.2;
+transform:scale(.8);
 }
+
+50%{
+opacity:1;
+transform:scale(1.4);
+}
+
+100%{
+opacity:.2;
+transform:scale(.8);
+}
+
 }
 .moon{
 
