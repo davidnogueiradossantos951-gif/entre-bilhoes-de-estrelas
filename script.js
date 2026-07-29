@@ -231,3 +231,29 @@ if (galaxia) {
     });
 
 }
+const universoFundo = document.getElementById("universoFundo");
+
+if (universoFundo) {
+
+    for (let i = 0; i < 400; i++) {
+
+        const estrela = document.createElement("div");
+
+        estrela.classList.add("estrelaUniverso");
+
+        estrela.style.left = Math.random() * 100 + "%";
+        estrela.style.top = Math.random() * 100 + "%";
+
+        const tamanho = Math.random() * 3 + 1;
+
+        estrela.style.width = tamanho + "px";
+        estrela.style.height = tamanho + "px";
+
+        estrela.style.animationDelay =
+        Math.random() * 5 + "s";
+
+        universoFundo.appendChild(estrela);
+
+    }
+
+}
