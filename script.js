@@ -20,3 +20,12 @@ star.style.width;
 
     stars.appendChild(star);
 }
+const btn = document.getElementById("btn");
+
+btn.addEventListener("click", () => {
+
+    document.getElementById("intro").style.display = "none";
+
+    document.getElementById("constelacao").style.display = "block";
+
+});
