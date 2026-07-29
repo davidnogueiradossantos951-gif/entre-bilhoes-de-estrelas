@@ -81,3 +81,44 @@ if (botaoUniverso) {
 
     });
 }
+const galaxia = document.getElementById("galaxiaCoracao");
+
+let girando = false;
+let inicioX = 0;
+let rotacao = 0;
+
+if (galaxia) {
+
+    galaxia.addEventListener("pointerdown", (e) => {
+
+        girando = true;
+        inicioX = e.clientX;
+
+        galaxia.setPointerCapture(e.pointerId);
+
+    });
+
+
+    galaxia.addEventListener("pointermove", (e) => {
+
+        if (!girando) return;
+
+        let movimento = e.clientX - inicioX;
+
+        rotacao += movimento * 0.5;
+
+        galaxia.style.transform =
+        `rotate(${rotacao}deg)`;
+
+        inicioX = e.clientX;
+
+    });
+
+
+    galaxia.addEventListener("pointerup", () => {
+
+        girando = false;
+
+    });
+
+}
