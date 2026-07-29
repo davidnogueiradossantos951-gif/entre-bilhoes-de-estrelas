@@ -785,3 +785,37 @@ font-size:1.2rem;
     }
 
 }
+#viagemEspacial::after {
+
+    content: "";
+
+    position: absolute;
+    inset: -100%;
+
+    background:
+    repeating-radial-gradient(
+        circle,
+        rgba(255,255,255,0.9) 0px,
+        transparent 3px,
+        transparent 50px
+    );
+
+    animation: tunelLuz 1.2s linear infinite;
+
+    opacity: 0.5;
+}
+
+
+@keyframes tunelLuz {
+
+    from {
+        transform: scale(0.3);
+        opacity: 0.2;
+    }
+
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+
+}
