@@ -558,3 +558,58 @@ font-size:1.2rem;
     }
 
 }
+/* GALÁXIA CORAÇÃO */
+
+#galaxiaCoracao {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: #020617;
+    z-index: 4000;
+
+    justify-content: center;
+    align-items: center;
+}
+
+
+.coracaoEstrelas {
+
+    width: 250px;
+    height: 250px;
+
+    position: relative;
+
+    animation:
+    aparecerCoracao 3s ease forwards;
+
+}
+
+
+.coracaoEstrelas::before {
+
+    content:"❤️";
+
+    position:absolute;
+
+    font-size:250px;
+
+    filter:
+    drop-shadow(0 0 20px white)
+    drop-shadow(0 0 50px #ff6ec7);
+
+}
+
+
+@keyframes aparecerCoracao {
+
+    from {
+        transform: scale(0);
+        opacity:0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity:1;
+    }
+
+}
