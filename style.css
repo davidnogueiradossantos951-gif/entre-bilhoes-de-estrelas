@@ -114,3 +114,29 @@ animation:piscando 2s infinite;
 opacity:.2;
 }
 }
+.moon{
+
+position:absolute;
+
+top:80px;
+right:80px;
+
+width:140px;
+height:140px;
+
+border-radius:50%;
+
+background:
+radial-gradient(
+circle at 30% 30%,
+#ffffff,
+#d9e6ff,
+#a5b8ff
+);
+
+box-shadow:
+0 0 30px rgba(255,255,255,.6),
+0 0 80px rgba(150,180,255,.4);
+
+opacity:.9;
+}
