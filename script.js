@@ -58,3 +58,12 @@ estrelas.forEach((estrela, index) => {
     });
 
 });
+function abrirPortalUniverso() {
+    const portal = document.getElementById("portalUniverso");
+
+    portal.classList.remove("portal-escondido");
+    portal.classList.add("portal-abrindo");
+}
+setTimeout(() => {
+    abrirPortalUniverso();
+}, 3000);
