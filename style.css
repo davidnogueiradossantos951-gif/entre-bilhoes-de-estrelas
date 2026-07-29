@@ -819,3 +819,41 @@ font-size:1.2rem;
     }
 
 }
+#luzUniverso {
+
+    position: fixed;
+    inset: 0;
+
+    background: white;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    z-index: 3000;
+
+}
+
+
+.explodirLuz {
+
+    animation: flashUniverso 1.5s forwards;
+
+}
+
+
+@keyframes flashUniverso {
+
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
