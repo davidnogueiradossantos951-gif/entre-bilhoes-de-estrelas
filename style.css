@@ -369,3 +369,39 @@ font-size:1.2rem;
         transform: scale(1);
     }
 }
+/* VIAGEM ESPACIAL */
+
+#viagemEspacial {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: black;
+    z-index: 2000;
+    overflow: hidden;
+}
+
+
+.estrelas-velocidade {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(circle, white 2px, transparent 3px);
+    background-size: 80px 80px;
+
+    animation: velocidadeEstrelas 1s linear infinite;
+}
+
+
+@keyframes velocidadeEstrelas {
+
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(8);
+        opacity: 0;
+    }
+
+}
