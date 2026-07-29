@@ -761,3 +761,29 @@ font-size:1.2rem;
 .galaxia-movendo {
     transition: none;
 }
+/* TRANSFORMAÇÃO FINAL */
+
+.galaxia-transformando {
+    animation: transformarUniverso 5s forwards;
+}
+
+
+@keyframes transformarUniverso {
+
+    0% {
+        filter: brightness(1);
+        transform: scale(1);
+    }
+
+    50% {
+        filter: brightness(3);
+        transform: scale(1.2);
+    }
+
+    100% {
+        filter: brightness(5);
+        transform: scale(2);
+        opacity: 0;
+    }
+
+}
