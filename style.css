@@ -241,3 +241,62 @@ font-family:'Poppins', sans-serif;
 
 font-size:1.2rem;
 }
+/* PASSO 18 - PORTAL */
+
+.portal-escondido {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle, #111b4d, #02030f);
+    color: white;
+    z-index: 999;
+    overflow: hidden;
+}
+
+.portal-conteudo {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.portal-conteudo h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.portal-conteudo p {
+    max-width: 400px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+#portalLuz {
+    margin-top: 40px;
+    font-size: 70px;
+    cursor: pointer;
+    animation: pulsarPortal 2s infinite;
+}
+
+.portal-conteudo span {
+    margin-top: 20px;
+    opacity: 0.8;
+}
+
+
+@keyframes pulsarPortal {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
