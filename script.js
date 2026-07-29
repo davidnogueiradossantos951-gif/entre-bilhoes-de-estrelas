@@ -44,6 +44,8 @@ const mensagens = [
 const estrelas = document.querySelectorAll(".estrela");
 const mensagem = document.getElementById("mensagem");
 
+let estrelasVistas = 0;
+
 estrelas.forEach((estrela, index) => {
 
     estrela.addEventListener("click", () => {
@@ -54,6 +56,26 @@ estrelas.forEach((estrela, index) => {
 
         estrela.style.boxShadow =
         "0 0 20px #ffd700, 0 0 40px #ffd700";
+
+
+        if (!estrela.classList.contains("vista")) {
+
+            estrela.classList.add("vista");
+
+            estrelasVistas++;
+
+        }
+
+
+        if (estrelasVistas === 5) {
+
+            setTimeout(() => {
+
+                abrirPortalUniverso();
+
+            }, 2000);
+
+        }
 
     });
 
