@@ -81,10 +81,18 @@ estrelas.forEach((estrela, index) => {
 
 });
 function abrirPortalUniverso() {
+
+    const constelacao = document.getElementById("constelacao");
     const portal = document.getElementById("portalUniverso");
 
+    // esconde as estrelas antigas
+    constelacao.style.display = "none";
+
+    // abre o portal
     portal.classList.remove("portal-escondido");
     portal.classList.add("portal-abrindo");
+
+}
 }
 const botaoUniverso = document.getElementById("botaoUniverso");
 const viagemEspacial = document.getElementById("viagemEspacial");
