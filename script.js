@@ -64,3 +64,20 @@ function abrirPortalUniverso() {
     portal.classList.remove("portal-escondido");
     portal.classList.add("portal-abrindo");
 }
+const botaoUniverso = document.getElementById("botaoUniverso");
+const viagemEspacial = document.getElementById("viagemEspacial");
+
+if (botaoUniverso) {
+    botaoUniverso.addEventListener("click", () => {
+
+        // esconde o conteúdo do portal
+        document.querySelector(".portal-conteudo").style.opacity = "0";
+
+        // ativa a viagem
+        viagemEspacial.style.display = "block";
+
+        // adiciona animação
+        viagemEspacial.classList.add("iniciar-viagem");
+
+    });
+}
