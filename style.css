@@ -27,8 +27,19 @@ padding:20px;
 }
 
 h1{
-font-size:2rem;
+font-family:'Cormorant Garamond', serif;
+font-size:3.2rem;
+font-weight:600;
+
+color:white;
+
+letter-spacing:2px;
+
 margin-bottom:20px;
+
+text-shadow:
+0 0 15px rgba(255,255,255,.3),
+0 0 30px rgba(255,255,255,.2);
 }
 
 p{
