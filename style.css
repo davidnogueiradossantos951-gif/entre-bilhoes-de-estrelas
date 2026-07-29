@@ -746,18 +746,3 @@ font-size:1.2rem;
     }
 
 }
-/* CONTROLE DA GALÁXIA */
-
-#galaxiaCoracao {
-    touch-action: none;
-    cursor: grab;
-}
-
-#galaxiaCoracao:active {
-    cursor: grabbing;
-}
-
-
-.galaxia-movendo {
-    transition: none;
-}
