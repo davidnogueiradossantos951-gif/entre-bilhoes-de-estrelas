@@ -122,3 +122,48 @@ if (galaxia) {
     });
 
 }
+let escala = 1;
+
+if (galaxia) {
+
+    galaxia.addEventListener("wheel", (e) => {
+
+        e.preventDefault();
+
+        if (e.deltaY < 0) {
+            escala += 0.1;
+        } else {
+            escala -= 0.1;
+        }
+
+        if (escala < 0.5) escala = 0.5;
+        if (escala > 3) escala = 3;
+
+        galaxia.style.transform =
+        `scale(${escala}) rotate(${rotacao}deg)`;
+
+    });
+
+
+    galaxia.addEventListener("touchmove", (e) => {
+
+        if (e.touches.length === 2) {
+
+            let distancia =
+            Math.hypot(
+                e.touches[0].clientX - e.touches[1].clientX,
+                e.touches[0].clientY - e.touches[1].clientY
+            );
+
+            escala = distancia / 200;
+
+            if (escala < 0.5) escala = 0.5;
+            if (escala > 3) escala = 3;
+
+            galaxia.style.transform =
+            `scale(${escala}) rotate(${rotacao}deg)`;
+        }
+
+    });
+
+}
