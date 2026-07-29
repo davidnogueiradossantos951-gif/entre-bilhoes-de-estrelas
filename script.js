@@ -167,3 +167,25 @@ if (galaxia) {
     });
 
 }
+let tempoInteracao = 0;
+let iniciouTransformacao = false;
+
+if (galaxia) {
+
+    galaxia.addEventListener("pointermove", () => {
+
+        if (iniciouTransformacao) return;
+
+        tempoInteracao++;
+
+        if (tempoInteracao > 80) {
+
+            iniciouTransformacao = true;
+
+            galaxia.classList.add("galaxia-transformando");
+
+        }
+
+    });
+
+}
