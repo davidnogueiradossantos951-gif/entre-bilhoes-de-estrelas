@@ -22,13 +22,23 @@ star.style.width;
 }
 const btn = document.getElementById("btn");
 
-btn.addEventListener("click", () => {
+if (btn) {
 
-    document.getElementById("intro").style.display = "none";
+    btn.addEventListener("click", () => {
 
-    document.getElementById("constelacao").style.display = "block";
+        const intro = document.getElementById("intro");
+        const constelacao = document.getElementById("constelacao");
 
-});
+        if (intro && constelacao) {
+
+            intro.style.display = "none";
+            constelacao.style.display = "block";
+
+        }
+
+    });
+
+}
 const mensagens = [
 "Entre tantas pessoas no mundo, foi você quem chamou minha atenção. ❤️",
 
