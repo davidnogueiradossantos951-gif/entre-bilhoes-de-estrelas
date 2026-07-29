@@ -11,6 +11,12 @@ for(let i = 0; i < 150; i++){
 
     star.style.animationDelay =
     Math.random()*2 + "s";
+    
+    star.style.width =
+(Math.random()*4 + 2) + "px";
+
+star.style.height =
+star.style.width;
 
     stars.appendChild(star);
 }
