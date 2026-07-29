@@ -327,3 +327,45 @@ font-size:1.2rem;
         transform: translateY(-200px);
     }
 }
+/* ANIMAÇÃO DE ENTRADA DO PORTAL */
+
+.portal-abrindo {
+    display: block;
+    animation: aparecerPortal 2s ease forwards;
+}
+
+
+@keyframes aparecerPortal {
+    from {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+.portal-abrindo #portalLuz {
+    animation: brilhoPortal 1.5s infinite;
+}
+
+
+@keyframes brilhoPortal {
+    0% {
+        filter: brightness(1);
+        transform: scale(1);
+    }
+
+    50% {
+        filter: brightness(2);
+        transform: scale(1.3);
+    }
+
+    100% {
+        filter: brightness(1);
+        transform: scale(1);
+    }
+}
