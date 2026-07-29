@@ -64,6 +64,3 @@ function abrirPortalUniverso() {
     portal.classList.remove("portal-escondido");
     portal.classList.add("portal-abrindo");
 }
-setTimeout(() => {
-    abrirPortalUniverso();
-}, 3000);
