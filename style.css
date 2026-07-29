@@ -739,16 +739,32 @@ font-size:1.2rem;
     90px 30px;
 
 
-    animation: girarGalaxia 18s linear infinite;
-
+    animation:
+girarGalaxia 18s linear infinite,
+brilharEstrelas 3s ease-in-out infinite;
 
     filter:
-    drop-shadow(0 0 8px white);
+drop-shadow(0 0 3px white)
+drop-shadow(0 0 8px rgba(255,255,255,.8));
 
-
-    opacity: .9;
+opacity: 1;
 }
 
+@keyframes brilharEstrelas {
+
+    0% {
+        opacity: .6;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: .6;
+    }
+
+}
 
 @keyframes girarGalaxia {
 
@@ -768,9 +784,27 @@ font-size:1.2rem;
 /* CONTROLE DA GALÁXIA */
 
 #galaxiaCoracao {
+
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 100vw;
+    height: 100vh;
+
+    display: none;
+
     touch-action: none;
     cursor: grab;
+
+    z-index: 4000;
+
+    overflow: hidden;
 }
+
 
 #galaxiaCoracao:active {
     cursor: grabbing;
