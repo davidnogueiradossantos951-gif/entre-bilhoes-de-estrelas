@@ -381,15 +381,37 @@ font-size:1.2rem;
 }
 
 
+/* ESTRELAS EM VELOCIDADE MÁXIMA */
+
 .estrelas-velocidade {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image:
-        radial-gradient(circle, white 2px, transparent 3px);
-    background-size: 80px 80px;
+    inset: -50%;
 
-    animation: velocidadeEstrelas 1s linear infinite;
+    background-image:
+        radial-gradient(ellipse, white 0%, transparent 60%);
+
+    background-size: 120px 10px;
+
+    transform: rotate(45deg);
+
+    animation: estrelasCorrendo 1s linear infinite;
+
+    filter: blur(1px);
+}
+
+
+@keyframes estrelasCorrendo {
+
+    from {
+        background-position: 0 0;
+        transform: rotate(45deg) scale(1);
+    }
+
+    to {
+        background-position: 500px 500px;
+        transform: rotate(45deg) scale(3);
+    }
+
 }
 
 
@@ -471,6 +493,67 @@ font-size:1.2rem;
 
     100% {
         transform: scale(3);
+        opacity: 1;
+    }
+
+}
+/* TÚNEL DA VIAGEM ESPACIAL */
+
+#viagemEspacial::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: radial-gradient(
+        circle,
+        transparent 5%,
+        black 75%
+    );
+
+    animation: tunelUniverso 2s infinite;
+}
+
+
+@keyframes tunelUniverso {
+
+    0% {
+        transform: scale(0.5);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(2);
+        opacity: 1;
+    }
+}
+/* TRANSIÇÃO DE LUZ */
+
+#luzUniverso {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: white;
+    z-index: 3000;
+}
+
+
+.explodirLuz {
+    display: block !important;
+    animation: explosaoLuz 2s forwards;
+}
+
+
+@keyframes explosaoLuz {
+
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
         opacity: 1;
     }
 
