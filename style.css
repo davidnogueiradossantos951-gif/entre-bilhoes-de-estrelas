@@ -904,3 +904,35 @@ opacity: 1;
     pointer-events: none;
 
 }
+.estrelaUniverso {
+
+    position: absolute;
+
+    background: white;
+
+    border-radius: 50%;
+
+    box-shadow:
+    0 0 5px white,
+    0 0 10px white,
+    0 0 20px white;
+
+    animation: piscarUniverso 4s infinite;
+}
+
+
+@keyframes piscarUniverso {
+
+    0% {
+        opacity: .3;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: .3;
+    }
+
+}
