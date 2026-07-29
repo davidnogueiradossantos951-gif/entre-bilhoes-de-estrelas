@@ -704,9 +704,11 @@ font-size:1.2rem;
 /* ESTRELAS GIRANDO AO REDOR DO CORAÇÃO */
 
 .estrelasOrbita {
+
     position: absolute;
-    width: 420px;
-    height: 420px;
+
+    width: 520px;
+    height: 520px;
 
     top: 50%;
     left: 50%;
@@ -715,17 +717,36 @@ font-size:1.2rem;
 
     border-radius: 50%;
 
-    background:
-    radial-gradient(circle, white 2px, transparent 3px);
 
-    background-size: 35px 35px;
+    background-image:
 
-    animation: girarGalaxia 12s linear infinite;
+    radial-gradient(circle, white 1px, transparent 1.5px),
+    radial-gradient(circle, rgba(255,255,255,.8) 2px, transparent 3px),
+    radial-gradient(circle, white 0.5px, transparent 1px);
+
+
+    background-size:
+
+    35px 35px,
+    70px 70px,
+    18px 18px;
+
+
+    background-position:
+
+    10px 20px,
+    40px 80px,
+    90px 30px;
+
+
+    animation: girarGalaxia 18s linear infinite;
+
 
     filter:
-    drop-shadow(0 0 10px white);
+    drop-shadow(0 0 8px white);
 
-    opacity: .8;
+
+    opacity: .9;
 }
 
 
